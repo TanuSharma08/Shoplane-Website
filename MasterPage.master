@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SHOPLANE - A Place FOR Shopping</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link href="shoplane.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <div id="top-bar">
+                <div class="logo">
+                    <a href='/'>
+                        <h4><span>SHOP</span>LANE</h4>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="shoplane.aspx">Home</a></li>
+                    <li><a href="shoplane.aspx#clothings">Clothings</a></li>
+                    <li><a href="shoplane.aspx#accessories">Accessories</a></li>
+                </ul>
+                <div class="icons">
+                    <i class="fa fa-search"></i>
+                    <div class="cart" id="cartIcon">
+                        <a href="/checkout.aspx">
+                            <i class="fa fa-shopping-cart">
+                                <span id="cart-count">0</span>
+                            </i>
+                        </a>
+                    </div>
+                    <i class="fa fa-user-circle-o"></i>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer>
+            <ul>
+                <li>
+                    <h3>Online Store</h3>
+                </li>
+                <li><a href="#">Men Clothing</a></li>
+                <li><a href="#">Women Clothing</a></li>
+                <li><a href="#">Men Accessories</a></li>
+                <li><a href="#">Women Accessories</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Helpful Links</h3>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Partners</h3>
+                </li>
+                <li><a href="#">Zara</a></li>
+                <li><a href="#">Pantaloons</a></li>
+                <li><a href="#">Levis</a></li>
+                <li><a href="#">UCB</a></li>
+                <li><a href="#">+ Many More</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Address</h3>
+                </li>
+                <li>Building 101</li>
+                <li>Central Avenue</li>
+                <li>LA - 902722</li>
+                <li>United States</li>
+            </ul>
+        </footer>
+        <script src="shoplane.js"></script>
+        <script src="https://shoplane.netlify.app/index.js"></script>
+    </form>
+</body>
+</html>
