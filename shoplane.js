@@ -117,4 +117,48 @@ var clothingCards = document.getElementById("clothingCards");
         }
         getCardsData();
 
+// add to cart
+
+        var addToCartBtn = document.getElementById("add-to-cart");
+        var cart = document.getElementById("cart-count");
+        var myCartData = [];
+        var cartIntialValue;
+
+        if(localStorage.getItem('cart-count') == null) {
+            localStorage.setItem('cart-count', '0');
+        } else {
+            var cartValue = localStorage.getItem('cart-count');
+            localStorage.setItem('cart-count', cartValue);
+        }
+        
+// event listener
+
+        addToCartBtn.addEventListener("click", function() {
+            var productId = window.location.search.split("=")[1];
+            var urlLink =
+              "https://5d76bf96515d1a0014085cf9.mockapi.io/product/" + productId;
+
+            function getDataForLocalStorage() {
+                var http = new XMLHttpRequest();
+                http.onreadystatechange = function() {
+                    if (this.readyState === 4) {
+                        if (this.status === 200) {
+                            var productData = JSON.parse(this.responseText);
+                            addDataIntoList(productData);
+                        }
+                    }
+                };
+                http.open("GET", urlLink, true);
+                http.send();
+            }
+            cartCount();
+            getDataForLocalStorage();
+        });
+
+
+
+
+
+
+
 

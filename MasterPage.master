@@ -98,7 +98,6 @@
             </ul>
         </footer>
         <script src="shoplane.js"></script>
-        <script src="https://shoplane.netlify.app/index.js"></script>
     </form>
 </body>
 </html>
